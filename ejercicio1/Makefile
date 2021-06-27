@@ -1,16 +1,3 @@
-#------------------------------------------------------------------------------
-# File:   Makefile
-# Author: PSCD-Unizar
-# Date:   octubre 2019
-# Coms:   Ejemplo de Makefile para la práctica 1 de PSCD
-#         "make practica_1_V1" compilará y generará el ejecutable "practica_1_V1"
-#         "make practica_1_V2" compilará y generará el ejecutable "practica_1_V2"
-#         "make all" compilará y generará ambos ejecutables 
-#               (alternativamente, "make", sin parámetros)
-#         "make clean" borra todo lo genearado, si existe
-#------------------------------------------------------------------------------
-
-#---------------------------------------------------------
 #definición de variables
 CC=g++
 CPPFLAGS=-I. -std=c++11      #opciones de compilación
