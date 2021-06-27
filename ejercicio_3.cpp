@@ -1,19 +1,10 @@
-//------------------------------------------------------------------------------
-// File:   ejercicio3.cpp
-// Author: Gabriel Olteanu & Hector Toral
-// Date:   sept-oct 2020
-// Coms:   ejercicio 3 de la práctica 1 de PSCD
-//         Compilar mediante:
-//           g++ ejercicio_3.cpp -o ejercicio_3 -std=c++11 -pthread
-//------------------------------------------------------------------------------
-
-#include <iostream>
-#include <thread>
-#include <string>
-#include <chrono>
-#include <time.h>       /* time */
-#include <iomanip>
-#include <cmath>
+# include <iostream>
+# include <thread>
+# include <string>
+# include <chrono>
+# include <time.h>
+# include <iomanip>
+# include <cmath>
 
 using namespace std;
 
@@ -25,9 +16,8 @@ const int NUM_REALES = 100; // Max numero de reales que guarda el vector "reales
 
 void average(const double reales[], double& media) {
     media = 0;
-    for (int i = 0; i < NUM_REALES; i++) {
+    for (int i = 0; i < NUM_REALES; i++)
         media += (reales[i] / NUM_REALES);
-    }
 }
 
 void minmax(const double reales[], double& min, double& max) {
@@ -42,9 +32,8 @@ void minmax(const double reales[], double& min, double& max) {
 void sigma(const double reales[], const double media, double& desviacion) {
     double sumatorio = 0;
     desviacion = 0;
-    for (int i = 0; i < NUM_REALES; i++) {
+    for (int i = 0; i < NUM_REALES; i++)
         sumatorio += pow(reales[i] - media, 2);
-    }
     desviacion = sqrt(sumatorio / (NUM_REALES-1));
 }
 
@@ -52,7 +41,6 @@ int main(int argc, char* argv[]) {
     thread P[N];
     double reales[NUM_REALES];
 
-    // Inicializacion del vector "reales"
     srand(time(NULL));
     for (int i = 0; i < 100; i++) {
         reales[i] = (TOP - BOTTOM) * ((double)rand() / (double)RAND_MAX) + BOTTOM;
